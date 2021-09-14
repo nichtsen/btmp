@@ -83,6 +83,7 @@ func TestFilePermWithPrefixPath(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	fmt.Printf("%o", dir.Mode().Perm())
 	if dir.Mode().Perm() != 0o0770 {
 		t.Fatal("unexpected directory permission")
 	}
